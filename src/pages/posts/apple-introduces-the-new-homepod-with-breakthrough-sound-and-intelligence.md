@@ -13,7 +13,7 @@ theme: 'light'
 featured: true
 ---
 
-![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|inline](../../static/img/hk1.jpg)
+![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|inline](https://www.chiman.love/static/img/hk1.jpg)
 
 <!-- https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-hero-230118_big.jpg.large_2x.jpg -->
 
