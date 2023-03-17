@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'Golang net/http & HTTP Serve 源码分析'
 pubDate: 2035-06-01
@@ -450,4 +450,4 @@ Go net/http 标准库，能让我们轻易地写出一个高性能的 HTTP Serve
 所以学习优秀 Go web 框架的前提就是弄清楚 net/http Server 部分的源码，同时，也能方便更好的去使用和优化框架。  
 本文所使用的源码均来自 go 1.18.3，部分方法说明翻译自官方注释。  
 
-如有不当之处，请批评指出。
+如有不当之处，请批评指出。 -->

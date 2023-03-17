@@ -1,20 +1,22 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
-title: 'Apple 推出新款 HomePod，带来突破性音质与智能体验'
+title: '这是我上线的第一个项目，也是第一个个人博客'
 pubDate: 2035-03-25
-description: '呈现出类拔萃的音质、增强的 Siri 功能以及安全放心的智能家居体验'
-author: 'Apple Newsroom'
+description: '会分享我的生活日常，港乐、港剧、新闻、英语学习...'
+author: 'Chiman'
 cover:
-    url: 'https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-hero-230118_big.jpg.large_2x.jpg'
-    square: 'https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-hero-230118_big.jpg.large_2x.jpg'
+    url: 'https://www.chiman.love/static/img/hk1.jpg'
+    square: 'https://www.chiman.love/static/img/hk1.jpg'
     alt: 'cover'
-tags: ["新闻稿", "Apple", "HomePod"] 
+tags: ["record"] 
 theme: 'light'
 featured: true
 ---
 
-![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|inline](https://www.chiman.love/static/img/hk1.jpg)
+![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|big](https://www.chiman.love/static/img/hk1.jpg)
 
+
+<!-- https://www.chiman.love/static/img/hk1.jpg -->
 <!-- https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-hero-230118_big.jpg.large_2x.jpg -->
 
 加利福尼亚州，库比提诺Apple 今日宣布推出 HomePod（第二代）。这款功能强大的智能扬声器采用优美的标志性设计，为用户带来新一代声学体验。HomePod 汇集了多项 Apple 创新技术与 Siri 智能，提供先进计算音频技术，支持播放沉浸式空间音频曲目，呈现前所未有的聆听体验。HomePod 带来管理日常任务、控制智能家居的便利新方式，用户可以使用 Siri 创建智能家居自动化功能，在家中触发烟雾或一氧化碳警报时获得通知，或者查看房间的温度与湿度——以上操作不必动手就能完成。

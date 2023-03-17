@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'Apple 推出为头脑风暴和创意协作设计的全新强大 app 无边记'
 pubDate: 2035-04-01
@@ -55,4 +55,4 @@ iPad Pro 上，无边记正在使用 FaceTime 通话协作功能。
 
 ## 推出时间
 
-今日起，所有支持 iOS 16.2、iPad OS 16.2 或 macOS Ventura 13.1 的 iPhone、iPad 及 Mac 均可免费下载无边记。
+今日起，所有支持 iOS 16.2、iPad OS 16.2 或 macOS Ventura 13.1 的 iPhone、iPad 及 Mac 均可免费下载无边记。 -->

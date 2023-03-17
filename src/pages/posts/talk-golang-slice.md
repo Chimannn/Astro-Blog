@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: '../../layouts/MarkdownPost.astro'
 title: '浅谈 Go 1.18.1的切片扩容机制'
 pubDate: 2022-04-17
@@ -171,4 +171,4 @@ newcap = int(capmem / et.size)
 这里我们需要的内存是40 bytes，所以会分配一个足够用，且最接近的内存块。所以给48bytes，这时，重新调整后的容量 newcap就为6。
 
 
-
+ -->
