@@ -1,0 +1,10 @@
+.navImg{
+    width: 2em;
+    height:2em;
+    display:block;
+    border-radius: 50%;
+}
+
+.navImg:hover{
+    
+}

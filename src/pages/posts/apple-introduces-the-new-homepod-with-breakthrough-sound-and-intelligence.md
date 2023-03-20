@@ -1,14 +1,14 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: '这是我上线的第一个项目，也是第一个个人博客'
-pubDate: 2035-03-25
+pubDate: 2023-03-20
 description: '会分享我的生活日常，港乐、港剧、新闻、英语学习...'
 author: 'Chiman'
 cover:
     url: 'https://www.chiman.love/static/img/hk1.jpg'
     square: 'https://www.chiman.love/static/img/hk1.jpg'
     alt: 'cover'
-tags: ["record"] 
+tags: ["随记"] 
 theme: 'light'
 featured: true
 ---
