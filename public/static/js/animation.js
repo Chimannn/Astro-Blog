@@ -55,7 +55,6 @@ function viewPortLoad(index) {
     viewPortLoad(index + 1)
     return;
   };
-
   loadAnimation(item)
   viewPortLoad(index + 1);
 }

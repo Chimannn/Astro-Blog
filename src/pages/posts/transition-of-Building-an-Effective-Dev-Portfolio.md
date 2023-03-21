@@ -1,23 +1,23 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
-title: '这是我上线的第一个项目，也是第一个个人博客'
-pubDate: 2023-03-20
-description: '会分享我的生活日常，港乐、港剧、新闻、英语学习...'
+title: '翻译: Building an Effective Dev Portfolio'
+pubDate: 2023-03-21
+description: '初级工程师如何打造自己出色的作品集'
 author: 'Chiman'
 cover:
-    url: 'https://www.chiman.love/static/img/hk1.jpg'
-    square: 'https://www.chiman.love/static/img/hk1.jpg'
+    url: '/static/img/hk1.jpg'
+    square: '/static/img/hk1.jpg'
     alt: 'cover'
-tags: ["随记"] 
+tags: ["英语学习"] 
 theme: 'light'
 featured: true
 ---
+<!-- ![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|big](https://www.chiman.love/static/img/hk1.jpg) -->
 
-![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|big](https://www.chiman.love/static/img/hk1.jpg)
 
+![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|big](/static/img/hk2.jpg)
 
-<!-- https://www.chiman.love/static/img/hk1.jpg -->
-<!-- https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-hero-230118_big.jpg.large_2x.jpg -->
+<img src="/static/img/hk2.jpg">
 
 加利福尼亚州，库比提诺Apple 今日宣布推出 HomePod（第二代）。这款功能强大的智能扬声器采用优美的标志性设计，为用户带来新一代声学体验。HomePod 汇集了多项 Apple 创新技术与 Siri 智能，提供先进计算音频技术，支持播放沉浸式空间音频曲目，呈现前所未有的聆听体验。HomePod 带来管理日常任务、控制智能家居的便利新方式，用户可以使用 Siri 创建智能家居自动化功能，在家中触发烟雾或一氧化碳警报时获得通知，或者查看房间的温度与湿度——以上操作不必动手就能完成。
 新款 HomePod 从今日起可在线或通过 Apple Store app 订购，2 月 3 日（周五）起正式发售。
@@ -28,8 +28,8 @@ featured: true
 
 新款 HomePod 的外观由无缝透声织网和背光触控板构成，优美的设计与各种空间相得益彰。HomePod 提供白色与全新的午夜色两种外观，后者由 100% 再生织物构成，配有同色系编织电源线。
 
-![HomePod 设计优美，外观由无缝透声织网和背光触控板构成。|inline]()
-<!-- https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-2-up-230118_big.jpg.large_2x.jpg -->
+![HomePod 设计优美，外观由无缝透声织网和背光触控板构成。|inline](https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-2-up-230118_big.jpg.large_2x.jpg)
+
 ## 强劲的声学表现
 
 HomePod 呈现出类拔萃的音质，低音醇厚深沉，高频惊艳动人。定制研发的高振幅低音单元、振幅高达惊人的 20 毫米的强劲电机驱动振膜、内置低音均衡器麦克风、底部环绕着由 5 个波束成形高音单元组成的阵列，共同打造强大的声学体验。S7 芯片结合软件和系统感应技术，提供更加先进的计算音频，彻底发挥声学系统的全部潜能，呈现前所未有的聆听体验。
@@ -43,7 +43,7 @@ HomePod 呈现出类拔萃的音质，低音醇厚深沉，高频惊艳动人。
 多个 HomePod 带来更出色的体验 两个及更多 HomePod 或 HomePod mini 可解锁一系列强大功能。利用支持多房间音频的隔空播放技术2，用户只要说“嘿 Siri”，或者触碰并按住 HomePod 顶部，就能用多个 HomePod 播放同一首歌曲，或在不同 HomePod 上播放不同歌曲，甚至使用多个 HomePod 进行广播，传话到各个房间。
 用户还可以把两个 HomePod 放在一起，组成立体声组合3。立体声组合不但可以分离左右声道，还能和谐地播放双声道音频，营造比传统立体声扬声器更宽广、更具沉浸感的声场，呈现出类拔萃的聆听体验。
 
-![用户可以使用两个 HomePod 组成立体声组合，打造更宽广、更具沉浸感的声场。](https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-stereo-pair-230118_big.jpg.large_2x.jpg)
+<!-- ![用户可以使用两个 HomePod 组成立体声组合，打造更宽广、更具沉浸感的声场。](../../static/img/hk1.jpg) -->
 
 ## 无缝整合 Apple 生态系统
 

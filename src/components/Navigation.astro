@@ -5,7 +5,6 @@ import multiavatar from '@multiavatar/multiavatar/esm'
 const code = multiavatar(Math.random().toString(36).substring(2))
 ---
 
-
 <nav class="nav">
   <div class="nav-wrapper">
     <div class="nav-content-wrapper">
@@ -19,7 +18,8 @@ const code = multiavatar(Math.random().toString(36).substring(2))
             <a href="/about" class="nav-item-content">关于</a>
           </div>
           <div class="nav-item-wrapper">
-            <span class="navImg" id="chiman" set:html={code}>
+            <span class="navImg" id="chiman" set:html={code} onclick="magnify()">
+              <span class="tips">这是您的随机头像，每次进入都会重新生成...<br>因为本网站还不支持登录功能 :)<br>请见谅哈哈哈😄😄😄<br>(支持点击放大)</span>
             </span>
             <!-- <a href="/rss.xml" class="nav-item-content" target="_blank">Login</a> -->
           </div>
@@ -28,3 +28,23 @@ const code = multiavatar(Math.random().toString(36).substring(2))
     </div>
   </div>
 </nav>
+<div class="modal" onclick="hidePopup()">
+  <div class="popup" set:html={code}>
+  </div>
+</div>
+<script is:inline>
+
+function magnify(){
+  	document.getElementsByClassName("modal")[0].setAttribute("style","display: flex")
+	document.body.style.overflow = "hidden"
+}
+
+function hidePopup(){
+  	document.getElementsByClassName("modal")[0].setAttribute("style","display: none")
+	document.body.style.overflow = "auto"
+}
+
+document.getElementsByClassName("popup")[0].addEventListener("click", function(event) {
+  	event.stopPropagation();
+});
+</script>

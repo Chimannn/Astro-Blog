@@ -52,7 +52,6 @@ function initLazyLoad() {
         var style = document.createElement("style");
         style.innerHTML = renderStyle(sign, percent);
         let target = document.getElementById(`lht${sign}`)
-
         if (!target) return;
         target.parentNode.insertBefore(style, target);
         item.classList.remove("image-load");
