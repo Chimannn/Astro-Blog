@@ -13,7 +13,7 @@ theme: 'light'
 featured: true
 ---
 
-![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|big](/static/img/hk2.jpg)
+![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|big](/static/img/hk1.jpg)
 
 ## 香港夜景
 
