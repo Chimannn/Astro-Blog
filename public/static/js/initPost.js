@@ -47,6 +47,16 @@ function initLazyLoad() {
       img.src = grandSon.src;
       let sign = md5(grandSon.src);
 
+      if (!target)  {
+        // If an absolute path is used as the image link, such as "/static/img.png",
+        // the URL of grandSon.src will become "https://example.com/static/img.png", resulting in a different md5.
+        // Therefore, we attempt to handle this situation by trying again with the absolute path.
+        const a = document.createElement('a');
+        a.href = grandSon.src;
+        sign = md5(a.pathname);
+      }
+        //  这是我自己改的方法,本想提交pull request，没想到最新版已有人修改此问题。代码更简洁。
+        //  let sign = (grandSon.src && isSameOrigin(grandSon.src)) ? md5(removeStatic(grandSon.src)) : md5(grandSon.src)
       img.onload = function () {
         let percent = ((img.height / img.width) * 100).toFixed(5);
         var style = document.createElement("style");
@@ -59,6 +69,22 @@ function initLazyLoad() {
       }
 
     }
+
+    // isSameOrigin = (url) => {
+    //   const currentUrl = window.location;
+    //   const targetUrl = new URL(url);
+    
+    //   return currentUrl.protocol === targetUrl.protocol &&
+    //           currentUrl.hostname === targetUrl.hostname;
+    // }
+
+    // removeStatic = (url) => {
+    //   const staticIndex = url.indexOf('/static');
+    //   if (staticIndex !== -1) {
+    //     return url.slice(staticIndex);
+    //   }
+    //   return url;
+    // }
 
     initImage();
   };
