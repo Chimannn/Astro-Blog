@@ -20,16 +20,16 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
           })
         }
 
-        <!-- {
+        {
           // tile-2up
-          allPosts.slice(1, 5).map((post) => {
+          allPosts.slice(1, 3).map((post) => {
             return (
-              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="2" />
             );
           })
         }
 
-        {
+        <!-- {
           // tile-3up
           allPosts.slice(5, 10).map((post) => {
             return (
@@ -57,14 +57,14 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 
       <ul role="list" class="section-tiles">
 
-        <!-- {
+        {
           // tile-2up
-          allPosts.slice(0, 6).map((post) => {
+          allPosts.slice(0, 2).map((post) => {
             return (
               <MoreTile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} />
             );
           })
-        } -->
+        }
       </ul>
       <div class="view-archive-wrapper">
         <a href="/archive" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">阅读历史文章</a>

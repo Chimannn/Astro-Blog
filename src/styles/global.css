@@ -1324,7 +1324,12 @@ html.js .tile.large-loaded .image {
 
 .tile-item {
   position: relative;
-  list-style: none
+  list-style: none;
+}
+
+.everydayfeed .tile-item{
+  border-radius: 5%;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, .4);
 }
 
 .tile-item:first-child.item-1up~.tile-item,
@@ -7344,4 +7349,12 @@ ul>li, ol>li {
 
 code {
   margin: 0px 0.25em;
+}
+
+
+.toTopDiv{
+  position: fixed;
+  bottom: 12em;
+  right: 8em;
+  background-color: pink;
 }
