@@ -7353,8 +7353,11 @@ code {
 
 
 .toTopDiv{
+  cursor: pointer;
+  z-index: 11;
+  width: 10rem;
+  height: auto;
   position: fixed;
   bottom: 12em;
   right: 8em;
-  background-color: pink;
 }

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ArchivePostList from "../layouts/ArchivePostList.astro";
+import Logo from "../components/logo.astro";
+
 const allPosts = await Astro.glob("./posts/*.md");
 const tags = ["英语学习"];
 const posts = [];
@@ -15,6 +17,7 @@ tags.forEach((tag) => {
 
 <BaseLayout primaryTitle="归档">
   <section class="archive">
+    <Logo/>
     <div class="section-content section-tag">
       {
         tags.map((tag, index) => {

@@ -2,12 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Tile from "../layouts/Tile.astro";
 import MoreTile from "../layouts/MoreTile.astro";
+import Logo from "../components/logo.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 ---
 
 <BaseLayout>
   <section class="everydayfeed">
+    <Logo/>
     <div class="section-content">
       <h2 class="section-head">最新文章</h2>
       <ul role="list" class="section-tiles">

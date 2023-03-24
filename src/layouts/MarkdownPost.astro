@@ -64,23 +64,34 @@ const dateFormated = formatDate(pubDate);
             </div>
           </div>
         </article>
-        <div class="toTopDiv">
-          <button onclick="scrollToTop()">飞升</button>
-          <!-- <canvas id="myCanvas"></canvas> -->
-        </div>
+        <div id="toTopDiv" class="toTopDiv" onclick="scrollToTop()"></div>
       </section>
     </main>
     <Footer />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.136/build/three.min.js" is:inline></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.115/examples/js/loaders/GLTFLoader.js" is:inline></script> -->
-
+    <script src="https://cdn.jsdelivr.net/npm/three@0.139.0/build/three.min.js" is:inline></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.139.0/examples/js/loaders/GLTFLoader.js" is:inline></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.0/lottie.min.js" is:inline></script>
     <script is:inline>
       var script = document.createElement("script");
       script.src = "/static/js/initPost.js";
       document.head.appendChild(script);
 
-      function scrollToTop(){
+      
+      var anim = bodymovin.loadAnimation({
+        container: document.getElementById('toTopDiv'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: '/static/img/rocket.json',
+      });
+      anim.setSpeed(2.1)
+      anim.goToAndStop(35,true)
+
+      async function scrollToTop(){
+        await playAnimation(anim,[35,60])
         scrollToPosition(0, 320)
+        await playAnimation(anim,[61,99])
+        await playAnimation(anim,[1,35])
       }
 
       const scrollToPosition = (distance, time) => {
@@ -107,58 +118,17 @@ const dateFormated = formatDate(pubDate);
 
       }
 
-
-      // var scene = new THREE.Scene();
-      // var camera = new THREE.PerspectiveCamera(
-      //   75,
-      //   window.innerWidth / window.innerHeight,
-      //   0.1,
-      //   1000
-      // );
-
-      //创建渲染器，设置尺寸为窗口尺寸，并将渲染后的元素添加到body
-      // var renderer = new THREE.WebGLRenderer();
-      // renderer.setSize(window.innerWidth, window.innerHeight);
-      // document.body.appendChild(renderer.domElement);
-
-      // //创建一个Mesh（绿色的3D立方体），并添加到场景中
-      // var geometry = new THREE.BoxGeometry();
-      // var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-      // var cube = new THREE.Mesh(geometry, material);
-      // scene.add(cube);
-
-      // //设置照相机的位置
-      // camera.position.z = 5;
-
-      // //浏览器每次渲染的时候更新立方体的旋转角度
-      // var animate = function () {
-      //   requestAnimationFrame(animate);
-
-      //   cube.rotation.x += 0.01;
-      //   cube.rotation.y += 0.01;
-
-      //   renderer.render(scene, camera);
-      // };
-
-      // animate();
-
-
-
-
-      // const canvas = document.getElementById("myCanvas");
-      // const renderer = new THREE.WebGLRenderer({ canvas });
-
-      // const loader = new THREE.ObjectLoader();
-      // loader.load('../../static/img/3d.gltf', function ( obj ) {
-      //   scene.add( obj );
-      // });
-
+      function playAnimation(animation, segements) {
+        return new Promise(resolve => {
+          animation.playSegments(segements, true);
       
-      // const loader = new THREE.GLTFLoader();
-      // loader.load( '/static/img/3d.gltf', function ( gltf ) {
-      //   const model = gltf.scene;
-      //   renderer.render(model, camera);
-      // });
+          const removeListener = animation.addEventListener('complete', () => {
+            resolve();
+            removeListener();
+          });
+        })
+      }
+
     </script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+---
+
+---
+
+<div id="3drunning" style="width:20em;height:auto;position:fixed;top:20em;left:3em;z-index: 1;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.0/lottie.min.js" is:inline></script>
+
+<script is:inline>
+    var anim = bodymovin.loadAnimation({
+      container: document.getElementById('3drunning'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '/static/img/running3d.json',
+    });
+</script>
