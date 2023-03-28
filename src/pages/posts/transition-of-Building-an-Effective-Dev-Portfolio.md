@@ -13,21 +13,19 @@ theme: 'light'
 featured: true
 ---
 
-## 优美设计
+## 第一章：基础
+**开发者的作品集是什么？**
 
-## 优美设计
+开发者作品集是一个展示开发者所完成工作的网站。这个概念来源于艺术界，例如：一个摄影师通常会创建一个作品集网站来展示他最好的作品。
 
-## 优美设计
+开发者作品集的目标是以最好的方式展示你自己和所做的工作。你的作品集应该让雇主对你很感兴趣。通过看它，会让你的未来雇主去想象与你合作有多棒！
 
-## 优美设计
 
-## 香港夜景
 
-![HomePod 汇集了多项 Apple 创新技术、Siri 智能和智能家居功能，为用户带来前所未有的聆听体验。|big](/static/img/hk2.jpg)
 
-## 优美设计
 
-新款 HomePod 的外观由无缝透声织网和背光触控板构成，优美的设计与各种空间相得益彰。HomePod 提供白色与全新的午夜色两种外观，后者由 100% 再生织物构成，配有同色系编织电源线。
 
-![HomePod 设计优美，外观由无缝透声织网和背光触控板构成。|inline](https://www.apple.com.cn/newsroom/images/product/homepod/standard/Apple-HomePod-2-up-230118_big.jpg.large_2x.jpg)
 
+#####
+Written by [Joshua Comeau](https://www.joshwcomeau.com/).   [原文链接](https://www.joshwcomeau.com/effective-portfolio/)<br>
+_用我蹩脚的英语进行翻译，为了阅读本书同时学习英语..._
