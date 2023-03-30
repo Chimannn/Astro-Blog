@@ -75,10 +75,16 @@ const dateFormated = formatDate(pubDate);
       var script = document.createElement("script");
       script.src = "/static/js/initPost.js";
       document.head.appendChild(script);
+      let rocket = document.getElementById('toTopDiv')
 
+      if(isMobile()){
+        rocket.style.width = "8em"
+        rocket.style.right = "-2rem"
+        rocket.style.bottom = "4em"
+      }
       //返回顶部小火箭
       var anim = bodymovin.loadAnimation({
-        container: document.getElementById('toTopDiv'),
+        container: rocket,
         renderer: 'svg',
         loop: false,
         autoplay: false,
@@ -98,8 +104,8 @@ const dateFormated = formatDate(pubDate);
             window.addEventListener("scroll",listenScroll)
           }
         })
-        document.getElementById("toTopDiv").style.visibility = "hidden"
-        document.getElementById("toTopDiv").style.opacity = 0
+        rocket.style.visibility = "hidden"
+        rocket.style.opacity = 0
         scrollTop()
         await playAnimation(anim,[80,99])
         await playAnimation(anim,[1,61])
@@ -126,14 +132,18 @@ const dateFormated = formatDate(pubDate);
       function listenScroll(){
         let scrollDistance = window.pageYOffset || document.documentElement.scrollTop
         if(scrollDistance > 500){
-          document.getElementById("toTopDiv").style.visibility = "visible"
-          document.getElementById("toTopDiv").style.opacity = 1
+          rocket.style.visibility = "visible"
+          rocket.style.opacity = 1
         }else{
-          document.getElementById("toTopDiv").style.visibility = "hidden"
-          document.getElementById("toTopDiv").style.opacity = 0
+          rocket.style.visibility = "hidden"
+          rocket.style.opacity = 0
         }
       }
-
+      
+      function isMobile() {
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        return width <= 768; // 移动端设备视口宽度一般小于 768px
+      }
     </script>
   </body>
 </html>

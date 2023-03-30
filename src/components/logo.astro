@@ -13,4 +13,14 @@
       autoplay: true,
       path: '/static/img/running3d.json',
     });
+
+    function isMobile() {
+      const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      return width <= 768; // 移动端设备视口宽度一般小于 768px
+    }
+    if(isMobile()){
+      document.getElementById('3drunning').style.width = "10em"
+      document.getElementById('3drunning').style.position = "absolute"
+      document.getElementById('3drunning').style.inset = "auto 1em -15em auto"
+    }
 </script>
