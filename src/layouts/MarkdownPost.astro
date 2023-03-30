@@ -76,7 +76,7 @@ const dateFormated = formatDate(pubDate);
       script.src = "/static/js/initPost.js";
       document.head.appendChild(script);
 
-      
+      //返回顶部小火箭
       var anim = bodymovin.loadAnimation({
         container: document.getElementById('toTopDiv'),
         renderer: 'svg',
@@ -85,37 +85,31 @@ const dateFormated = formatDate(pubDate);
         path: '/static/img/rocket.json',
       });
       anim.setSpeed(2.1)
-      anim.goToAndStop(35,true)
+      anim.goToAndStop(61,true)
+
+      window.addEventListener("scroll",listenScroll)
 
       async function scrollToTop(){
-        await playAnimation(anim,[35,60])
-        scrollToPosition(0, 320)
-        await playAnimation(anim,[61,99])
-        await playAnimation(anim,[1,35])
+        await playAnimation(anim,[61,80])
+        window.removeEventListener("scroll",listenScroll)
+        window.addEventListener("scroll",()=>{
+          let distance = window.pageYOffset || document.documentElement.scrollTop
+          if(distance == 0){
+            window.addEventListener("scroll",listenScroll)
+          }
+        })
+        document.getElementById("toTopDiv").style.visibility = "hidden"
+        document.getElementById("toTopDiv").style.opacity = 0
+        scrollTop()
+        await playAnimation(anim,[80,99])
+        await playAnimation(anim,[1,61])
       }
 
-      const scrollToPosition = (distance, time) => {
-        // st为函数执行时滚动条到文档顶部的距离
-        const st = document.documentElement.scrollTop
-        // 需要滑动的距离
-        const need = st - distance
-        // 循环时间,值越小越耗性能
-        const loopTime = 20
-        // 循环次数
-        let loopCount = time / loopTime
-        // 每次步进的距离
-        const step = need / loopCount
-
-        const scrollTimer = setInterval(() => {
-            if (loopCount > 0) {
-                // 此项设置是为了精准定位
-                loopCount !== 1 ? document.documentElement.scrollTop -= step : document.documentElement.scrollTop = distance
-                loopCount--
-            } else {
-                clearInterval(scrollTimer)
-            }
-        }, loopTime)
-
+      const scrollTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       }
 
       function playAnimation(animation, segements) {
@@ -127,6 +121,17 @@ const dateFormated = formatDate(pubDate);
             removeListener();
           });
         })
+      }
+
+      function listenScroll(){
+        let scrollDistance = window.pageYOffset || document.documentElement.scrollTop
+        if(scrollDistance > 500){
+          document.getElementById("toTopDiv").style.visibility = "visible"
+          document.getElementById("toTopDiv").style.opacity = 1
+        }else{
+          document.getElementById("toTopDiv").style.visibility = "hidden"
+          document.getElementById("toTopDiv").style.opacity = 0
+        }
       }
 
     </script>
