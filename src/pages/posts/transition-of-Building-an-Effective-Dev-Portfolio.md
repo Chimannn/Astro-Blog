@@ -105,6 +105,11 @@ Levi还为他当地的面包店建了一个小型单页面网站，以帮助他�
 
 如果你没有任何符合这些标准的项目，也没关系！这个列表是为了帮助你们决定如何优先处理已有项目，并非意味着排除其他类型的项目。
 
+**不要包括的项目**
+
+<font color="red">教程/工作坊练习项目</font><br>
+不要包括那些通过跟着教程一步一步敲出来的项目以及在训练营中安排的讲习班或练习的项目。
+
 
 #####
 Written by [Joshua Comeau](https://www.joshwcomeau.com/).   [原文链接](https://www.joshwcomeau.com/effective-portfolio/)<br>
