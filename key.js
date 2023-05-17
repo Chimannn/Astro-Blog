@@ -1,0 +1,3 @@
+const VUE_APP_KEY_WEATHER="2e6dc9389df9df6784b22a066d266e84"
+
+export default VUE_APP_KEY_WEATHER;
