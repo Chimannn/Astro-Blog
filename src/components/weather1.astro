@@ -1,0 +1,105 @@
+---
+
+---
+
+<!-- <div class:list={["weather, {isShow: isShow}"]}> -->
+    <div class="weather" style="">
+    <div class="location"></div>
+    <div class="temperature"></div>
+    <div class="weatherInfo"></div>
+</div>
+
+<script>
+import axios from "axios"
+import VUE_APP_KEY_WEATHER from "../../key"
+
+    let localAdcode = ""
+    getlocation()
+
+    function getlocation() {
+        let options = {
+            enableHighAccuracy: false,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError, options);
+        }
+    }
+
+    function onGeoSuccess(ops) {
+        let latitude = limitDotStr6(ops.coords.latitude)
+        let longitude = limitDotStr6(ops.coords.longitude)
+        const location = `${longitude},${latitude}`
+        axios.get(`https://restapi.amap.com/v3/geocode/regeo?key=${VUE_APP_KEY_WEATHER}&location=${location}`)
+        .then(res => {
+            localAdcode = res.data?.regeocode?.addressComponent?.adcode
+            getWeatherInfo(localAdcode)
+        })
+    }
+
+    function  onGeoError(err) {
+        console.log(err);
+        document.getElementsByClassName("weather")[0].style.display = "none"
+    }
+
+    function limitDotStr6(str) {
+        str = str.toString()
+        const parts = str.split(".")
+        if(parts.length > 1 && parts[1].length > 6){
+            return `${parts[0]}.${parts[1].substring(0,6)}`
+        }
+        return str
+    }
+
+    function getWeatherInfo(adcode){
+        axios.get(`https://restapi.amap.com/v3/weather/weatherInfo?key=${VUE_APP_KEY_WEATHER}&city=${adcode}`)
+        .then(response => {
+            const data = response.data                
+            if(data.status == 1){
+                document.getElementsByClassName("location")[0].innerHTML = data.lives[0].city
+                document.getElementsByClassName("temperature")[0].innerHTML = data.lives[0].temperature + "˚C"
+                document.getElementsByClassName("weatherInfo")[0].innerHTML = data.lives[0].weather
+                document.getElementsByClassName("weather")[0].style.display = "block"
+            }
+                        
+        })  
+        .catch(() => {
+            document.getElementsByClassName("weather")[0].style.display = "none"
+        });
+    }
+</script>
+
+
+<style>
+    .weather {
+        color: darkgray !important;
+        display: none;
+        font-family: serif;
+        font-size: .9rem;
+        line-height: 1.25rem;
+        z-index: 100;
+        position: absolute;
+        top: -1.1rem;
+        right: 0;
+        width: 3.8rem;
+        height: 3.8rem;
+        box-shadow: 0.4rem 0.4rem 1.3rem 0rem rgba(0,0,0,0.75);
+        /* box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75); */
+        border-radius: 1rem;
+        background: center;
+        color: white;
+        padding: .5rem;
+    }
+    .temperature{
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 1068px){
+        .weather {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+</style>

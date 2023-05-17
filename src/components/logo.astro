@@ -2,7 +2,7 @@
 
 ---
 
-<div id="3drunning" style="width:20em;height:auto;position:fixed;top:20em;left:3em;z-index: 1;"></div>
+<div id="3drunning" class="3drunning" style=""></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.0/lottie.min.js" is:inline></script>
 
 <script is:inline>
@@ -13,14 +13,20 @@
       autoplay: true,
       path: '/static/img/running3d.json',
     });
-
-    function isMobile() {
-      const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      return width <= 768; // 移动端设备视口宽度一般小于 768px
-    }
-    if(isMobile()){
-      document.getElementById('3drunning').style.width = "10em"
-      document.getElementById('3drunning').style.position = "absolute"
-      document.getElementById('3drunning').style.inset = "auto 1em -15em auto"
-    }
 </script>
+
+<style>
+  div {
+    width:18rem;
+    height:auto;
+    position:fixed;
+    top:20rem;
+    left:-3rem;
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    div {
+      display: none;
+    }
+  }
+</style>

@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "astro dev",
+		"dev": "astro dev --host 0.0.0.0",
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
@@ -13,6 +13,7 @@
 		"@astrojs/rss": "^2.1.1",
 		"@multiavatar/multiavatar": "^1.0.7",
 		"astro": "^2.0.11",
+		"axios": "^1.4.0",
 		"md5": "^2.3.0",
 		"rehype": "^12.0.1",
 		"unist-util-visit": "^4.1.2"
